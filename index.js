@@ -135,5 +135,5 @@ if (sentryEnabled) {
     app.use(raven.middleware.express.errorHandler(process.env.SENTRY_DSN));
 }
 
-app.listen(process.env.PORT);
-console.log('Server listening on port', process.env.PORT);
+app.listen(process.env.PORT || 8080);
+console.log('Server listening on port', process.env.PORT || 8080);
