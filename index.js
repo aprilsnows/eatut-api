@@ -12,14 +12,14 @@ var http = require('http'),
 
 var app = express();
 
-var sentryEnabled = typeof process.env.SENTRY !== 'undefined' && process.env.SENTRY.ENABLED;
+var sentryEnabled = typeof process.env.SENTRY_DSN !== 'undefined';
 var ravenClient;
 
 if (sentryEnabled) {
-    ravenClient = new raven.Client(process.env.SENTRY.DSN);
+    ravenClient = new raven.Client(process.env.SENTRY_DSN);
     ravenClient.patchGlobal();
 
-    app.use(raven.middleware.express.requestHandler(process.env.SENTRY.DSN));
+    app.use(raven.middleware.express.requestHandler(process.env.SENTRY_DSN));
 }
 
 app.use(function(req, res, next) {
@@ -132,7 +132,7 @@ app.get(['/:date', '/:date/:lang'], function(req, res, next) {
 });
 
 if (sentryEnabled) {
-    app.use(raven.middleware.express.errorHandler(process.env.SENTRY.DSN));
+    app.use(raven.middleware.express.errorHandler(process.env.SENTRY_DSN));
 }
 
 app.listen(process.env.PORT);
