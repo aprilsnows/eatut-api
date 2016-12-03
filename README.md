@@ -3,9 +3,9 @@
 Menu API for TUT/TTY
 
 ````
-GET https://eatut.herokuapp.com/YYYY-MM-DD/ (default: en)
-    https://eatut.herokuapp.com/YYYY-MM-DD/fi
-    https://eatut.herokuapp.com/YYYY-MM-DD/en
+GET https://eatut-api.herokuapp.com/YYYY-MM-DD/ (default: en)
+    https://eatut-api.herokuapp.com/YYYY-MM-DD/fi
+    https://eatut-api.herokuapp.com/YYYY-MM-DD/en
 ````
 
 
