@@ -166,7 +166,11 @@ exports.getMenus = function(date, lang, callback) {
                     obj[menu.restaurant].menus = [];
                 }
                 
-                obj[menu.restaurant].menus.push(menu);
+                if (obj[menu.restaurant].menus[0] && obj[menu.restaurant].menus[0].restaurant == menu.restaurant){
+                    obj[menu.restaurant].menus[0].meals.push.apply(obj[menu.restaurant].menus[0].meals, menu.meals);
+                }else{
+                    obj[menu.restaurant].menus.push(menu);
+                }
             });
             
             var restaurantList = Object.keys(obj).map(function(restaurantName) {
@@ -175,7 +179,7 @@ exports.getMenus = function(date, lang, callback) {
                     menus: obj[restaurantName].menus
                 };
             });
-            
+                      
             callback(null, restaurantList);
         } catch(e) {
             callback(e);
