@@ -1,13 +1,11 @@
-# eatut API
+# eatut.fi  API
 
 Menu API for TUT Restaurants (Reaktori, Newton, Hertsi, Café Konehuone)
 
 ````
-GET https://eatut-api.herokuapp.com/YYYY-MM-DD/ (default: english)
-    https://eatut-api.herokuapp.com/YYYY-MM-DD/fi
-    https://eatut-api.herokuapp.com/YYYY-MM-DD/en
-    https://eatut-api.herokuapp.com/ (today, english)
+GET http://api.eatut.fi/YYYY-MM-DD/ (default: english)
+    http://api.eatut.fi/YYYY-MM-DD/fi
+    http://api.eatut.fi/YYYY-MM-DD/en
+    http://api.eatut.fi/ (default: today, english)
 ````
 
-
-Inspired by https://github.com/tophattom/ruoka-api
