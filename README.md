@@ -1,6 +1,6 @@
 # eatut API
 
-Menu API for TUT/TTY
+Menu API for TUT Restaurants (Reaktori, Newton, Hertsi, Café Konehuone)
 
 ````
 GET https://eatut-api.herokuapp.com/YYYY-MM-DD/ (default: english)
