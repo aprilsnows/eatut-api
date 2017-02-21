@@ -9,3 +9,4 @@ GET http://api.eatut.fi/YYYY-MM-DD/ (default: english)
     http://api.eatut.fi/ (default: today, english)
 ````
 
+Forked from [tophattom/ruoka-api](https://github.com/tophattom/ruoka-api)
